@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Price Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Hotel.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Inputs</h1>
+        <form  method="POST" id="inputForm">
+            <div class="form-column">
+                <label for="Star Rating">Star Rating (1-5):</label>
+                <input type="number" id="Star Rating" name="Star Rating" min="1" max="5" required>
+                
+                <label for="Rating">Rating (1-10):</label>
+                <input type="number" id="Rating" name="Rating" min="1" max="10" step="0.1" required>
+                
+                <label for="Staff">Staff (1-10):</label>
+                <input type="number" id="Staff" name="Staff" min="1" max="10" step="0.1" required>
+                
+                <label for="Facilities">Facilities (1-10):</label>
+                <input type="number" id="Facilities" name="Facilities" min="1" max="10" step="0.1" required>
+                
+                <label for="Location">Location (1-10):</label>
+                <input type="number" id="Location" name="Location" min="1" max="10" step="0.1" required>
+            </div>
+            <div class="form-column">
+                <label for="Comfort">Comfort (1-10):</label>
+                <input type="number" id="Comfort" name="Comfort" min="1" max="10" step="0.1" required>
+                
+                <label for="Cleanliness">Cleanliness (1-10):</label>
+                <input type="number" id="Cleanliness" name="Cleanliness" min="1" max="10" step="0.1" required>
+                
+                <label for="Free Parking">Free Parking:</label>
+                <select id="Free Parking" name="Free Parking">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <label for="Fitness Centre">Fitness Centre:</label>
+                <select id="Fitness Centre" name="Fitness Centre">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <label for="Spa and Wellness Centre">Spa and Wellness Centre:</label>
+                <select id="Spa and Wellness Centre" name="Spa and Wellness Centre">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <label for="Airport Shuttle">Airport Shuttle:</label>
+                <select id="Airport Shuttle" name="Airport Shuttle">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <div class="result">
+            {% if pred != 0 %}
+            <p>
+                Estimated Price : ${{pred}}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
