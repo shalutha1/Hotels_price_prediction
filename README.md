@@ -11,6 +11,8 @@ We began by thoroughly exploring and preprocessing the dataset, handling missing
 📊 Results:
 After rigorous experimentation and fine-tuning of hyperparameters, our Linear Regression model demonstrated impressive performance with an accuracy of on the test dataset. Furthermore, we conducted a feature importance analysis.
 
+Web Application Development 📌: To make the model accessible to users, I developed a web application using HTML and CSS for the front-end and Flask for the back-end. The web app allows users to input Hotel characteristics and instantly receive price predictions. The user-friendly interface and seamless integration between front-end and back-end components made the application both functional and interactive.
+
 
 🚀 Key Takeaways:
 This project provided invaluable hands-on experience in data preprocessing, feature engineering, and model selection, showcasing the effectiveness of Linear Regression in tackling real-world Regression tasks. It underscores the importance of leveraging ensemble methods to achieve robust predictive performance in complex datasets.
